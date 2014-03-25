@@ -1,4 +1,4 @@
-package strategy.investimento;
+package behavioral.strategy.investimento;
 
 public class Conta {
 

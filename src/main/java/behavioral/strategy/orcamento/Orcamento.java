@@ -1,4 +1,4 @@
-package strategy.orcamento;
+package behavioral.strategy.orcamento;
 
 public class Orcamento {
 

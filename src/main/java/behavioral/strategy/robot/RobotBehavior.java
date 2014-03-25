@@ -1,4 +1,4 @@
-package strategy.robot;
+package behavioral.strategy.robot;
 
 /**
  * Interface that defines the strategy

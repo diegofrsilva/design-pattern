@@ -1,4 +1,4 @@
-package strategy.orcamento;
+package behavioral.strategy.orcamento;
 
 /**
  * Crie o imposto que se chama ICCC, que retorna 5% do valor total caso o

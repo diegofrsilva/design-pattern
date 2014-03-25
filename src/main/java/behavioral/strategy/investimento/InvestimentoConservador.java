@@ -1,4 +1,4 @@
-package strategy.investimento;
+package behavioral.strategy.investimento;
 
 /**
  * "CONSERVADOR", que sempre retorna 0.8% do valor investido;
