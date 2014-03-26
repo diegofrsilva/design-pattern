@@ -1,19 +1,16 @@
-package behavioral.chainOfResponsibility;
+package behavioral.chainOfResponsibility.desconto;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Orgamento {
+public class Orcamento {
 
 	private List<Item> itens;
 	private double valor;
 
-	public Orgamento() {
-		this.itens = new ArrayList<>();
-	}
-
-	public Orgamento(double valor) {
+	public Orcamento(double valor) {
 		this.valor = valor;
+		this.itens = new ArrayList<>();
 	}
 
 	public double getValor() {
@@ -22,5 +19,9 @@ public class Orgamento {
 
 	public List<Item> getItens() {
 		return itens;
+	}
+
+	public void addItem(Item item) {
+		this.itens.add(item);
 	}
 }

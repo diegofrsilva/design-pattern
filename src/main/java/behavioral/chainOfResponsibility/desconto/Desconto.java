@@ -1,4 +1,4 @@
-package behavioral.chainOfResponsibility;
+package behavioral.chainOfResponsibility.desconto;
 
 public abstract class Desconto {
 
@@ -11,5 +11,5 @@ public abstract class Desconto {
 		this.proximo = proximo;
 	}
 
-	public abstract double desconta(Orgamento orgamento);
+	public abstract double desconta(Orcamento orcamento);
 }
