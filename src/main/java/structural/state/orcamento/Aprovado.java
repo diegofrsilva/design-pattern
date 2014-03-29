@@ -1,10 +1,10 @@
-package structural.decorator.state;
+package structural.state.orcamento;
 
-public class EmAprovacao implements EstadoOrcamento {
+public class Aprovado implements EstadoOrcamento {
 
 	@Override
 	public void calcularDescontroExtra(Orcamento orcamento) {
-		double valor = orcamento.getValor() * 0.05;
+		double valor = orcamento.getValor() * 0.02;
 		orcamento.setValor(valor);
 
 		System.out.println(valor);
@@ -12,16 +12,16 @@ public class EmAprovacao implements EstadoOrcamento {
 
 	@Override
 	public void aprovar(Orcamento orcamento) {
-		orcamento.setEstado(new Aprovado());
+		throw new RuntimeException("O orcamento ja esta aprovado");
 	}
 
 	@Override
 	public void reprovar(Orcamento orcamento) {
-		orcamento.setEstado(new Reprovado());
+		throw new RuntimeException("O orcamento deve ir para finalizado");
 	}
 
 	@Override
 	public void finalizar(Orcamento orcamento) {
-		throw new RuntimeException("Orcamento nao pode ir diretamente para finalizado");
+		orcamento.setEstado(new Finalizado());
 	}
 }

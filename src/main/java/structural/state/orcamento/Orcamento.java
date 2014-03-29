@@ -1,4 +1,4 @@
-package structural.decorator.state;
+package structural.state.orcamento;
 
 public class Orcamento {
 
