@@ -2,9 +2,9 @@ package behaviohal.observer.nota;
 
 public class ItemDaNota {
 
-	private String descricao;
-	private double valor;
-
+	String descricao;
+	double valor;
+	
 	public ItemDaNota(String descricao, double valor) {
 		super();
 		this.descricao = descricao;
