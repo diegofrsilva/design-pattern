@@ -1,4 +1,4 @@
-package structural.builder.nota;
+package behaviohal.observer.nota;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -13,12 +13,18 @@ public class NotaFiscalBuilder {
 	private Calendar dataEmissao;
 	private String observacoes;
 	private List<ItemDaNota> itens;
+	private List<AcaoGeracaoNota> acoes;
 
 	public NotaFiscalBuilder() {
 		this.dataEmissao = Calendar.getInstance();
-		this.itens = new ArrayList<ItemDaNota>();
+		this.itens = new ArrayList<>();
+		this.acoes = new ArrayList<>();
 	}
-	
+
+	public void adicionarAcao(AcaoGeracaoNota acaoGeracaoNota) {
+		this.acoes.add(acaoGeracaoNota);
+	}
+
 	public NotaFiscalBuilder comRazaoSocial(String razaoSocial) {
 		this.razaoSocial = razaoSocial;
 		return this;
@@ -47,6 +53,14 @@ public class NotaFiscalBuilder {
 	}
 
 	public NotaFiscal criar() {
-		return new NotaFiscal(razaoSocial, cnpj, valorBruto, impostos, dataEmissao, observacoes, itens);
+		NotaFiscal notaFiscal = new NotaFiscal(razaoSocial, cnpj, valorBruto, impostos, dataEmissao, observacoes, itens);
+		executarAcoes(notaFiscal);
+		return notaFiscal;
+	}
+
+	private void executarAcoes(NotaFiscal notaFiscal) {
+		for (AcaoGeracaoNota acao : acoes) {
+			acao.executar(notaFiscal);
+		}
 	}
 }

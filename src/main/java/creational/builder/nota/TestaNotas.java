@@ -1,4 +1,4 @@
-package structural.builder.nota;
+package creational.builder.nota;
 
 
 public class TestaNotas {

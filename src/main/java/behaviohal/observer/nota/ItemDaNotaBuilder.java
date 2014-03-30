@@ -1,4 +1,4 @@
-package structural.builder.nota;
+package behaviohal.observer.nota;
 
 public class ItemDaNotaBuilder {
 

@@ -1,4 +1,4 @@
-package structural.builder.nota;
+package behaviohal.observer.nota;
 
 import java.util.Calendar;
 import java.util.List;
