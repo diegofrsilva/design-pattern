@@ -6,7 +6,7 @@ import java.util.List;
 public class Orcamento {
 
 	private List<Item> itens;
-	private double valor;
+	protected double valor;
 
 	public Orcamento(double valor) {
 		this.valor = valor;
